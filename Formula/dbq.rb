@@ -1,28 +1,28 @@
 class Dbq < Formula
   desc "Guarded multi-database query CLI with read-only credential profiles"
   homepage "https://github.com/rioliu/dbq"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/rioliu/dbq/releases/download/v0.2.0/dbq_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "96a0ecd49bd3e062c222d14d77045b7ac52a8716a5219e4dfdc89de09ac929aa"
+      url "https://github.com/rioliu/dbq/releases/download/v0.2.1/dbq_v0.2.1_darwin_arm64.tar.gz"
+      sha256 "949cbba383dbe8106f663c782e9039ccc849d9fab2978165b1655c0c0e1e87a5"
     end
     on_intel do
-      url "https://github.com/rioliu/dbq/releases/download/v0.2.0/dbq_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "3278a26ec69349aced8d8add6c139393c5fb0eb3df602178c57a841d83e7149c"
+      url "https://github.com/rioliu/dbq/releases/download/v0.2.1/dbq_v0.2.1_darwin_amd64.tar.gz"
+      sha256 "d7964187eefe707f4fe00ed2f76064835a87ce154930d39d43db89fcffe7fd3b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rioliu/dbq/releases/download/v0.2.0/dbq_v0.2.0_linux_arm64.tar.gz"
-      sha256 "aff134a6f437d7f969f2d61f94c05858a3d3032c189401c04198c511f574bd8a"
+      url "https://github.com/rioliu/dbq/releases/download/v0.2.1/dbq_v0.2.1_linux_arm64.tar.gz"
+      sha256 "600891ae954c3b05c35c6f9dc25e237c3bc5f50f62bc72f7c35a75d76076dc2e"
     end
     on_intel do
-      url "https://github.com/rioliu/dbq/releases/download/v0.2.0/dbq_v0.2.0_linux_amd64.tar.gz"
-      sha256 "e5d9f9430293728e8323ec57d6548d88d2a7d5f9373bfc28ffa045376e299b60"
+      url "https://github.com/rioliu/dbq/releases/download/v0.2.1/dbq_v0.2.1_linux_amd64.tar.gz"
+      sha256 "a8594c852e0213ba1e356ea6346767931ad756aa8e95bc9f81cdc2e75d514aaa"
     end
   end
 
