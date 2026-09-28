@@ -39,13 +39,16 @@ if [ -z "$checksums_url" ] || [ "$checksums_url" = "null" ]; then
     exit 1
 fi
 sums_file="$(mktemp)"
-trap 'rm -f "$sums_file"' EXIT
+tmp="$(mktemp)"
+out="$(mktemp)"
+trap 'rm -f "$sums_file" "$tmp" "$out"' EXIT
 curl -fsSL "$checksums_url" > "$sums_file"
 
-# 1. version line, 2. release tag inside every download url
-tmp="$(mktemp)"
+# 1. version line, 2. release tag inside every download url path,
+# 3. version inside the asset file name (dbq_v0.2.1_... -> dbq_v0.2.2_...)
 sed -e "s/^  version \".*\"$/  version \"${ver}\"/" \
     -e "s|/download/v[^/]*/|/download/v${ver}/|" \
+    -e "s|${tool}_v${current}|${tool}_v${ver}|g" \
     "$formula" > "$tmp"
 
 # 3. sha256 following each url line, looked up by the asset's file name
@@ -73,7 +76,10 @@ awk -v sums="$sums_file" '
         pending = 0
     }
     { print }
-' "$tmp" > "$formula"
-rm -f "$tmp"
+' "$tmp" > "$out"
+
+# only overwrite the formula after a fully successful rewrite, so a
+# mid-awk failure (missing checksum) cannot leave a truncated file
+mv "$out" "$formula"
 
 echo "$tool: bumped $current -> $ver"
