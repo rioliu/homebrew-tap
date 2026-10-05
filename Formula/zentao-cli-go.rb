@@ -1,7 +1,6 @@
 class ZentaoCliGo < Formula
   desc "Zentao CLI with comment support, profiles, and contract-tested server behavior"
   homepage "https://github.com/rioliu/zentao-cli-go"
-  version "0.1.0"
   license "MIT"
 
   on_macos do
