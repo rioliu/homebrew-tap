@@ -5,23 +5,23 @@ class ZentaoCliGo < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.0/zentao-cli-go_v0.10.0_darwin_arm64.tar.gz"
-      sha256 "014d6abac08114da26756942ebb3689d75b4fc3b2b0a6b75d0f07e6a15e5b2fd"
+      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.1/zentao-cli-go_v0.10.1_darwin_arm64.tar.gz"
+      sha256 "15a25e2c36d3d0fce21b083b03c138830a5802327bd9530fb3aca63c46ab85da"
     end
     on_intel do
-      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.0/zentao-cli-go_v0.10.0_darwin_amd64.tar.gz"
-      sha256 "317264fe87f925e6a395748777416923a24e083a8b824bdfa63e4c35d9ecbc98"
+      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.1/zentao-cli-go_v0.10.1_darwin_amd64.tar.gz"
+      sha256 "d28f9574b40238318c42f42a1c4a136dc289a7a15e8b0b81a33076c05f0819c3"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.0/zentao-cli-go_v0.10.0_linux_arm64.tar.gz"
-      sha256 "c8de4733b389600d402e31d5e12ec8c93b1230460451f3ba811b1aa29385fe60"
+      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.1/zentao-cli-go_v0.10.1_linux_arm64.tar.gz"
+      sha256 "92c4b925c976f9863fbcdb8e32f61cf24d3030f9762e3cc7d336b52942934516"
     end
     on_intel do
-      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.0/zentao-cli-go_v0.10.0_linux_amd64.tar.gz"
-      sha256 "df5c194e215eec7d4c07010f993810a6c0249a8d4949fb057a1868383012f0f8"
+      url "https://github.com/rioliu/zentao-cli-go/releases/download/v0.10.1/zentao-cli-go_v0.10.1_linux_amd64.tar.gz"
+      sha256 "34f1abf36c6aef9e8864717005fce6367f2bcdd74e51fe8f77135b40acc5ab04"
     end
   end
 
